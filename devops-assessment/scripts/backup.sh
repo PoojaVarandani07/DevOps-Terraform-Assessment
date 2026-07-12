@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # =============================================================================
 # scripts/backup.sh
-# Creates a timestamped, compressed PostgreSQL dump from the local Docker
 # Compose database and stores it in the ./backups/ directory.
 #
 # Usage:

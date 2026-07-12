@@ -134,24 +134,6 @@ terraform --version   # ≥ 1.6.0
 aws --version         # AWS CLI configured with appropriate IAM permissions
 ```
 
-### Environment Differences
-
-| Setting | dev | prod |
-|---------|-----|------|
-| RDS instance | `db.t3.micro` | `db.r6g.large` |
-| Allocated storage | 20 GB | 100 GB |
-| Multi-AZ | ❌ | ✅ |
-| Backup retention | 3 days | 30 days |
-| Deletion protection | ❌ | ✅ |
-| Final snapshot | ❌ | ✅ |
-| Fargate Spot | ✅ (cost saving) | ❌ (stable) |
-| Container Insights | ❌ | ✅ |
-| Execute command | ✅ (debug) | ❌ |
-| ALB HTTPS | ❌ (HTTP only) | ✅ (redirect + cert) |
-| Task CPU/Memory | 256 / 512 | 1024 / 2048 |
-| Autoscale range | 1–2 tasks | 2–10 tasks |
-| Log retention | 7 days | 90 days |
-
 ### Running Terraform (dev)
 
 ```bash
@@ -450,7 +432,7 @@ After running `./scripts/restore.sh` you should see output like:
  b1000001-0000-0000-0000-00000001 | pending   |             1 |     18000.00
  ...
 
-[INFO]  ✅ Restore verified successfully!
+ Restore verified successfully!
 ```
 
 **Additional manual checks:**
